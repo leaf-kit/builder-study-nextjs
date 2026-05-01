@@ -1,0 +1,18 @@
+{
+  // 학습자가 저장소를 처음 열면 VS Code가 "추천 확장 설치" 프롬프트를 띄웁니다.
+  // 각 확장 옆 주석은 "이 학습 저장소에서 왜 필요한가"를 설명합니다.
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    // ESLint: Next.js 기본 규칙(next/core-web-vitals)을 IDE에서 실시간으로 표시.
+    "esbenp.prettier-vscode",
+    // Prettier: 저장 시 자동 포맷. 두 형태(.tsx / .learn.tsx) 사이 스타일 차이를 없앤다.
+    "bradlc.vscode-tailwindcss",
+    // Tailwind IntelliSense: className 자동완성 + hover preview. 05_styling 토픽 학습에 필수.
+    "ms-vscode.vscode-typescript-next",
+    // 최신 TS: `satisfies`, `const` 타입 매개변수 등 최신 문법을 IDE가 정확히 표시.
+    "formulahendry.auto-rename-tag",
+    // JSX 태그 짝 이름 자동 변경. 컴포넌트 리팩토링 속도가 크게 올라간다.
+    "christian-kohler.path-intellisense"
+    // 경로 import 자동완성. `@/` 별칭 사용 시 도움.
+  ]
+}

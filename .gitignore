@@ -1,0 +1,51 @@
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Editor / OS
+.vscode/*.log
+.DS_Store
+Thumbs.db
+*.swp
+
+# Vercel
+.vercel/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Test/coverage
+coverage/
+
+# Turbopack
+.turbo/
+
+# 사전 설계/작업 노트 (개인용, 형상 관리 제외)
+PLAN.md
+TODO/
+
+# 어시스턴트/IDE 도구 설정 (외부 노출 불필요)
+CLAUDE.md
+.claude/
+.cursor/
+.aider*
+.continue/
+.copilot/
+.specstory/

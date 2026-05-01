@@ -1,0 +1,38 @@
+{
+  // 워크스페이스 격리: 사용자 전역 설정이 학습 저장소 동작을 흔들지 않게 한다.
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // TypeScript: 워크스페이스 버전 사용 (전역 TS와 충돌 방지)
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // ESLint: 학습 저장소 안의 모든 TS/TSX/JS/JSX 파일에 적용
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+  // Tailwind: .learn.tsx 형제 파일에서도 className 인텔리센스 켜기
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "files.associations": {
+    "*.learn.tsx": "typescriptreact",
+    "*.learn.ts": "typescript"
+  },
+
+  // Next.js typedRoutes 사용 시 .next 안의 타입을 IDE가 인식하도록
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/out": true
+  }
+}

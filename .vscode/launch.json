@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // F5: Next.js 개발 서버를 디버그 모드로 실행 (서버 측 브레이크포인트 작동)
+      "name": "Next.js: 서버 디버그 (dev)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/next",
+      "runtimeArgs": ["dev"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "env": {
+        "NODE_OPTIONS": "--inspect"
+      }
+    },
+    {
+      // 클라이언트 컴포넌트 측 디버깅: Chrome 연결
+      "name": "Next.js: 클라이언트 디버그 (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      // 비-라우트 학습 스크립트 (lessons/**/*.ts) 단일 파일 실행 + 디버그
+      // 사용법: 학습 .ts 파일을 열고 F5
+      "name": "lessons/: 현재 파일 실행 (tsx)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/tsx",
+      "runtimeArgs": ["${file}"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "compounds": [
+    {
+      // 풀스택 디버그: 서버 + 클라이언트를 한 번에
+      "name": "Next.js: 풀스택 디버그",
+      "configurations": ["Next.js: 서버 디버그 (dev)", "Next.js: 클라이언트 디버그 (Chrome)"]
+    }
+  ]
+}
